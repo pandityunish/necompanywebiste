@@ -158,9 +158,9 @@ h6 {
 
 #header .logo img {
   padding: 0;
-  height: 200px;
+  height: 300px;
   /* background-color: red; */
-  margin-top: -70px;
+  margin-top: -110px;
   object-fit: cover;
   /* margin: 7px 0; */
   /* height: 80px;
@@ -1380,7 +1380,11 @@ h6 {
     bottom: 15px;
   }
 }
-
+@media (max-width: 768px) {
+ #header .logo img{
+  margin-left: -30px;
+ }
+}
 @media (max-width: 767px) {
   #intro .intro-info {
     width: 100%;

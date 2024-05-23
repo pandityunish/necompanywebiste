@@ -51,51 +51,53 @@
       <section class="container-fluid py-5 bg-light px-10 mt-4 mt-md-8" style="padding-top: 500px;">
         <div class="row justify-content-between align-items-start">
           <div class="col-lg-6 d-flex flex-column gap-4 px-3 px-md-5 mt-4">
-            <p class="font-weight-bold text-primary">Erzählen sie mehr über ihr Projekt.</p>
-            <h1 class="font-weight-bold display-7s">BISE-Webdesign: Ihr Partner für Webdesign, Grafikdesign und App-Entwicklung            </h1>
-            <p class="text-muted">Fragen Sie jetzt unverbindlich Ihre individuelles Projekt an!            </p>
+            <p class="font-weight-bold text-primary">BISE-Webdesign: Ihr Partner für Webdesign, Grafikdesign und App-Entwicklung            </p>
+            <h1 class="font-weight-bold display-7s">Fragen Sie jetzt unverbindlich Ihre individuelles Projekt an!
+            </h1>
+            <p class="text-muted">Erhalten Sie ein maßgeschneidertes Webdesign, Grafikdesign und App-Entwicklung, die perfekt zu Ihrem Unternehmen passen
+            </p>
             <div class="mt-4 ">
               <div class="d-flex gap-2 align-items-center mb-2">
                 <div class="h-7 w-7 bg-primary d-flex align-items-center justify-content-center rounded-circle text-white">
                   <i class="bi bi-check"></i>
                 </div>
-                <p class="text-secondary mb-0">Günstige Preise</p>
+                <p class=" mb-0 font-weight-bold text-primary">Günstige Preise</p>
               </div>
               <div class="d-flex gap-2 align-items-center mb-2">
                 <div class="h-7 w-7 bg-primary d-flex align-items-center justify-content-center rounded-circle text-white">
                   <i class="bi bi-check"></i>
                 </div>
-                <p class="text-secondary mb-0">Schnelle Lieferzeiten</p>
+                <p class="font-weight-bold text-primary mb-0">Schnelle Lieferzeiten</p>
               </div>
               <div class="d-flex gap-2 align-items-center mb-2">
                 <div class="h-7 w-7 bg-primary d-flex align-items-center justify-content-center rounded-circle text-white">
                   <i class="bi bi-check"></i>
                 </div>
-                <p class="text-secondary mb-0">Professionelle Arbeit</p>
+                <p class="font-weight-bold text-primary mb-0">Professionelle Arbeit</p>
               </div>
               <div class="d-flex gap-2 align-items-center mb-2">
                 <div class="h-7 w-7 bg-primary d-flex align-items-center justify-content-center rounded-circle text-white">
                   <i class="bi bi-check"></i>
                 </div>
-                <p class="text-secondary mb-0">Maßgeschneiderte Lösungen</p>
+                <p class="font-weight-bold text-primary mb-0">Maßgeschneiderte Lösungen</p>
               </div>
               <div class="d-flex gap-2 align-items-center mb-2">
                 <div class="h-7 w-7 bg-primary d-flex align-items-center justify-content-center rounded-circle text-white">
                   <i class="bi bi-check"></i>
                 </div>
-                <p class="text-secondary mb-0">Gute Kommunikation und Zusammenarbeit</p>
+                <p class="font-weight-bold text-primary mb-0">Gute Kommunikation und Zusammenarbeit</p>
               </div>
               <div class="d-flex gap-2 align-items-center mb-2">
                 <div class="h-7 w-7 bg-primary d-flex align-items-center justify-content-center rounded-circle text-white">
                   <i class="bi bi-check"></i>
                 </div>
-                <p class="text-secondary mb-0">Modernste Technologien</p>
+                <p class="font-weight-bold text-primary mb-0">Modernste Technologien</p>
               </div>
               <div class="d-flex gap-2 align-items-center mb-2">
                 <div class="h-7 w-7 bg-primary d-flex align-items-center justify-content-center rounded-circle text-white">
                   <i class="bi bi-check"></i>
                 </div>
-                <p class="text-secondary mb-0">Kundenzufriedenheit</p>
+                <p class="font-weight-bold text-primary mb-0">Kundenzufriedenheit</p>
               </div>
             </div>
           </div>
@@ -128,20 +130,17 @@
                   <small class="text-danger d-none">PLZ is required</small>
                 </div>
               </div> -->
-              <!-- <div class="form-row">
+              <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="Stadt" required>
-                  <small class="text-danger d-none">Stadt is required</small>
+                  <input type="email" class="form-control" placeholder="E-MAIL" required>
+                  <small class="text-danger d-none">E-MAIL is required</small>
                 </div>
                 <div class="form-group col-md-6">
                   <input type="text" class="form-control" placeholder="Telefonnummer" required>
                   <small class="text-danger d-none">Telefonnummer is required</small>
                 </div>
-              </div> -->
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="E-Mail-Adresse" required>
-                <small class="text-danger d-none">E-Mail-Adresse is required</small>
               </div>
+             
               <div class="form-group mt-3">
                 <select class="form-control" required>
                   <option value="" disabled selected>Bitte wählen Sie eine Option</option>
@@ -151,7 +150,10 @@
                 </select>
                 <small class="text-danger d-none">Option is required</small>
               </div>
-      
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Ihre Nachricht" style="border-radius: 10px;"></textarea>
+                <div class="validation"></div>
+              </div>
               <div class="d-flex justify-content-between align-items-center">
                 <button type="submit" class="btn btn-primary mt-4">Jetzt verbindlich einreichen</button>
               </div>
