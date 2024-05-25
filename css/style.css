@@ -482,7 +482,12 @@ h6 {
 .section-bg {
   background: #ecf5ff;
 }
-
+.success-message {
+  display: none;
+  color: green;
+  font-size: 16px;
+  margin-top: 15px;
+}
 /* About Us Section
 --------------------------------*/
 
@@ -1419,4 +1424,56 @@ h6 {
   #intro {
     padding: 100px 0 20px 0;
   }
+}
+
+
+.heading {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .heading {
+      font-size: 2.5rem;
+      margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+      font-size: 3.125rem;
+      margin-top: 4rem;
+  }
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+      padding: 8rem 15rem;
+  }
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.link {
+  color: #1E90FF;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
 }

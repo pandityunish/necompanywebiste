@@ -36,7 +36,7 @@
     
           <nav class="main-nav float-right d-none d-lg-block">
             <ul>
-              <li class="active"><a href="/index.html">Heim</a></li>
+              <li class="active"><a href="/index.html">Home</a></li>
               <li><a href="#about">Über uns </a></li>
               <li><a href="#services">Dienstleistungen</a></li>
               <!-- <li><a href="#portfolio">Portfolio</a></li> -->
@@ -105,18 +105,20 @@
             <p class="font-weight-bold h4 text-black">Kontaktieren Sie uns für Ihr maßgeschneidertes Projektangebot ohne Verpflichtungen!            </p>
             <p class="text-muted">Beschreiben Sie Ihr Projekt und erhalten Sie ein individuelles Angebot, das perfekt zu Ihren Bedürfnissen passt.
             </p>
-            <form>
+            <form action="https://api.web3forms.com/submit" method="post" role="form" class="contactForm">
+              <input type="hidden" name="access_key" value="cd991b75-74a2-4c9e-b588-aa31eece056b">
+
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name der Firma" required>
+                <input type="text" class="form-control" placeholder="Name der Firma" name="companyname" required>
                 <small class="text-danger d-none">Name der Firma is required</small>
               </div>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="Vorname" required>
+                  <input type="text" class="form-control" placeholder="Vorname" name="firstname" required>
                   <small class="text-danger d-none">Vorname is required</small>
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="Nachname" required>
+                  <input type="text" class="form-control" placeholder="Nachname" name="lastname" required>
                   <small class="text-danger d-none">Nachname is required</small>
                 </div>
               </div>
@@ -132,17 +134,17 @@
               </div> -->
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <input type="email" class="form-control" placeholder="E-mail" required>
+                  <input type="email" class="form-control" name="email" placeholder="E-mail" required>
                   <small class="text-danger d-none">E-mail is required</small>
                 </div>
                 <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="Telefonnummer" required>
+                  <input type="text" class="form-control" placeholder="Telefonnummer" name="phonenumber" required>
                   <small class="text-danger d-none">Telefonnummer is required</small>
                 </div>
               </div>
              
               <div class="form-group mt-3">
-                <select class="form-control" required>
+                <select class="form-control" required name="category">
                   <option value="" disabled selected>Bitte wählen Sie eine Option</option>
                   <option value="app">App</option>
                   <option value="website">Website</option>
@@ -175,11 +177,10 @@
               <div class="col-lg-2 col-md-6 footer-links">
                 <h4>Useful Links</h4>
                 <ul>
-                  <li><a href="#">Hemi</a></li>
-                  <li><a href="#">Über uns              </a></li>
-                  <li><a href="#">Dienstleistungen</a></li>
-                  <li><a href="#">Nutzungsbedingungen              </a></li>
-                  <li><a href="#">Datenschutzrichtlinie</a></li>
+            
+                  <li><a href="/datenschutz.html">Datenschutz</a></li>
+                  <li><a href="/immpressum.html">Impressum              </a></li>
+                  <li><a href="#">Jetzt Starten</a></li>
                 </ul>
               </div>
     
@@ -194,11 +195,11 @@
                 </p>
     
                 <div class="social-links">
-                  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                  <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                  <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-                  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                  <!-- <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> -->
+                  <a href="https://www.instagram.com/bise.design/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+                  <!-- <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a> -->
                 </div>
     
               </div>

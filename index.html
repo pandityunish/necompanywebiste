@@ -51,7 +51,7 @@
 
       <nav class="main-nav float-right d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#intro">Heim</a></li>
+          <li class="active"><a href="#intro">Home</a></li>
           <li><a href="#about">Über uns </a></li>
           <li><a href="#services">Dienstleistungen</a></li>
           <!-- <li><a href="#portfolio">Portfolio</a></li> -->
@@ -323,7 +323,7 @@
           <p class="font-weight-normal px-3 px-md-0 text-center text-muted mt-1" style="max-width: 600px;">
             Erfahren Sie, was unsere Kunden über unseren Service sagen und wie wir ihnen geholfen haben, ihre Unternehmen auszubauen.
           </p>
-          <div class=" p-4 p-md-3 mt-4 position-relative d-flex flex-column align-items-center justify-content-center section-bg" style="max-width: 800px; width: 100%;">
+          <div class=" p-4 p-md-3 mt-4 position-relative d-flex flex-column align-items-center justify-content-center section-bg" style="max-width: 800px; width: 100%; border-radius: 30px;">
          <a href="https://esk-direktvertrieb.de/" target="_blank">   <img src="img/logo1.png" alt="" class="  border-2 mt-3" style="width: 100px; height: 100px; object-fit: fill;" /></a>
             <p class="font-weight-medium text-center text-muted px-2 px-md-4 mt-3" style="font-size: 1rem;">
               BISE hat unsere Website genau nach unseren Wünschen gestaltet. Die Kommunikation war einfach und effektiv. Wir sind sehr zufrieden mit dem Ergebnis und können BISE nur empfehlen. Vielen Dank für die großartige Zusammenarbeit!
@@ -783,26 +783,29 @@
             <div class="form">
               <div id="sendmessage">Your message has been sent. Thank you!</div>
               <div id="errormessage"></div>
-              <form action="" method="post" role="form" class="contactForm">
+              <form action="https://api.web3forms.com/submit" method="post" role="form" class="contactForm">
+                <!-- <input type="hidden" name="access_key" value="cd991b75-74a2-4c9e-b588-aa31eece056b"> -->
                 <div class="form-row">
                   <div class="form-group col-lg-6">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Ihr Name                    " data-rule="minlen:4" data-msg="Please enter at least 4 chars" style="border-radius: 10px;" />
-                    <div class="validation"></div>
+                    <!-- <div class="validation"></div> -->
                   </div>
                   <div class="form-group col-lg-6">
                     <input type="email" class="form-control" name="email" id="email" placeholder="E-MAIL" data-rule="email" data-msg="Please enter a valid email" style="border-radius: 10px;"/>
-                    <div class="validation"></div>
+                    <!-- <div class="validation"></div> -->
                   </div>
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control" name="subject" id="subject" placeholder="Betreff" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" style="border-radius: 10px;"/>
-                  <div class="validation"></div>
+                  <!-- <div class="validation"></div> -->
                 </div>
                 <div class="form-group">
                   <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Ihre Nachricht" style="border-radius: 10px;"></textarea>
-                  <div class="validation"></div>
+                  <!-- <div class="validation"></div> -->
                 </div>
                 <div class="text-center"><button type="submit" title="Send Message">Senden</button></div>
+                <div class="success-message text-center">Ihre Nachricht wurde erfolgreich gesendet!</div>
+
               </form>
             </div>
           </div>
@@ -831,11 +834,10 @@
           <div class="col-lg-2 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="#">Hemi</a></li>
-              <li><a href="#">Über uns              </a></li>
-              <li><a href="#">Dienstleistungen</a></li>
-              <li><a href="#">Nutzungsbedingungen              </a></li>
-              <li><a href="#">Datenschutzrichtlinie</a></li>
+            
+              <li><a href="/datenschutz.html">Datenschutz</a></li>
+              <li><a href="/immpressum.html">Impressum              </a></li>
+              <li><a href="#">Jetzt Starten</a></li>
             </ul>
           </div>
 
@@ -850,11 +852,11 @@
             </p>
 
             <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
-              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              <!-- <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> -->
+              <a href="https://www.instagram.com/bise.design/" target="_blank" class="instagram"><i class="fa fa-instagram"></i></a>
+              <!-- <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a> -->
             </div>
 
           </div>
@@ -882,7 +884,40 @@
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <!-- Uncomment below i you want to use a preloader -->
   <!-- <div id="preloader"></div> -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.querySelector(".contactForm");
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
 
+            const formData = new FormData(form);
+            formData.append("access_key", "cd991b75-74a2-4c9e-b588-aa31eece056b"); // Add the API key to the form data
+
+            // Submit the form data using fetch API
+            fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    // Clear the form fields
+                    form.reset();
+
+                    // Display the success message
+                    const successMessage = document.querySelector(".success-message");
+                    successMessage.style.display = "block";
+                    successMessage.textContent = "Ihre Nachricht wurde erfolgreich gesendet!";
+                } else {
+                    alert("Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
+                }
+            })
+            .catch(error => {
+                alert("Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.");
+            });
+        });
+    });
+</script>
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
