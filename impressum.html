@@ -22,6 +22,58 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <style>
+    .heading {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  margin-top: 2rem;
+} 
+
+ @media (min-width: 768px) {
+  .heading {
+      font-size: 2.5rem;
+      margin-top: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heading {
+      font-size: 3.125rem;
+      margin-top: 4rem;
+  }
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .content {
+      padding: 8rem 15rem;
+  }
+}
+
+.section-title1 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.link {
+  color: #1E90FF;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+  </style>
 </head>
 <body>
     <header id="header" class="fixed-top">
@@ -36,12 +88,12 @@
           <nav class="main-nav float-right d-none d-lg-block">
             <ul>
               <li class="active"><a href="/index.html">Home</a></li>
-              <li><a href="#about">Über uns </a></li>
-              <li><a href="#services">Dienstleistungen</a></li>
+              <li><a href="/index.html#about">Über uns </a></li>
+              <li><a href="/index.html#services">Dienstleistungen</a></li>
               <!-- <li><a href="#portfolio">Portfolio</a></li> -->
               <!-- <li><a href="#team">Team</a></li> -->
              
-              <li><a href="#contact">Kontaktiere uns </a></li>
+              <li><a href="/index.html#contact">Kontaktiere uns </a></li>
             </ul>
           </nav><!-- .main-nav -->
           
@@ -63,8 +115,7 @@
 
         </p>
 
-        <p class="section-title">Registereintrag:</p>
-        <p>Wird Nachgereicht</p>
+        
 
         <p class="section-title">Streitschlichtung:</p>
         <p>
@@ -106,7 +157,7 @@
                 <ul>
             
                   <li><a href="/datenschutz.html">Datenschutz</a></li>
-                  <li><a href="/immpressum.html">Impressum              </a></li>
+                  <li><a href="/impressum.html">Impressum              </a></li>
                   <li><a href="#">Jetzt Starten</a></li>
                 </ul>
               </div>
